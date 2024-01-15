@@ -5,7 +5,7 @@
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/icon.png?raw=true)
 
 GoHealing is a revolutionary application that makes planning easy
-and organize user leisure trips. Some of the features this application has are:
+and organize user leisure trips. Some of the features this application has are :
 - Ordering recreational tickets online, GoHealing makes it easy for users to get them
 tourist attractions even in the palm of your cell phone.
 - Souvenir shop. If the tour owner has an official souvenir shop, it will also be provided inside
