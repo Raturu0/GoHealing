@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
 import 'package:gohealing/TEST/WidgetTest.dart';
+import 'package:gohealing/User/pages/Detail/Tiket/DetalTiketPage.dart';
 import 'dart:async';
 import 'firebase_options.dart';
 
