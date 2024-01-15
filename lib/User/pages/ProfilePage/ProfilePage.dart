@@ -2,6 +2,8 @@ import "package:flutter/material.dart";
 import "package:gohealing/Developer/Manual/Developerr.dart";
 import "package:gohealing/User/pages/LoginPage/LoginPage.dart";
 import 'package:gohealing/User/widgets/shapeOfProfile.dart';
+import 'package:gohealing/User/widgets/NamaProfil.dart';
+import 'package:gohealing/User/widgets/OutputProfile.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -87,7 +89,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 painter: RPSCustomPainter(),
               ),
               Positioned(
-                top: 30, // Sesuaikan nilai ini sesuai kebutuhan
+                top: 20, // Sesuaikan nilai ini sesuai kebutuhan
                 child: Container(
                   width: 125,
                   height: 125,
@@ -104,161 +106,44 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ),
               ),
-              Positioned(
-                top: 180,
+              Container(
+                padding: EdgeInsets.only(top: 140),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      alignment: Alignment.topLeft,
-                      child: Text('Nama'),
+                    NamaProfil(text: 'Nama'),
+                    OutputProfile(text: 'Saber Nathan Khalid'),
+                    SizedBox(
+                      height: 10,
                     ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 20),
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            spreadRadius: 2,
-                            blurRadius: 5,
-                            offset: Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        child: Text('halo'),
-                      ),
-                      height: 40,
-                      width: double.infinity,
+                    NamaProfil(text: 'Bio'),
+                    OutputProfile(
+                        text:
+                            'Yang penting win streak. Bismillah glory berkah'),
+                    SizedBox(
+                      height: 10,
                     ),
+                    NamaProfil(text: 'Nomor Handphone'),
+                    OutputProfile(text: '0857 - 9876 - 9325'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    NamaProfil(text: 'Alamat E-mail'),
+                    OutputProfile(text: 'mangeak30@gmail.com'),
                     SizedBox(
                       height: 10,
                     ),
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       alignment: Alignment.topLeft,
-                      child: Text('Nama'),
+                      child: Text('Alamat'),
                     ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 20),
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            spreadRadius: 2,
-                            blurRadius: 5,
-                            offset: Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        child: Text('halo'),
-                      ),
-                      height: 40,
-                      width: double.infinity,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      alignment: Alignment.topLeft,
-                      child: Text('Nama'),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 20),
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            spreadRadius: 2,
-                            blurRadius: 5,
-                            offset: Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        child: Text('halo'),
-                      ),
-                      height: 40,
-                      width: double.infinity,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      alignment: Alignment.topLeft,
-                      child: Text('Nama'),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 20),
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            spreadRadius: 2,
-                            blurRadius: 5,
-                            offset: Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        child: Text('halo'),
-                      ),
-                      height: 40,
-                      width: double.infinity,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      alignment: Alignment.topLeft,
-                      child: Text('Nama'),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 20),
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            spreadRadius: 2,
-                            blurRadius: 5,
-                            offset: Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        child: Text('halo'),
-                      ),
-                      height: 40,
-                      width: double.infinity,
-                    ),
-                    SizedBox(
-                      height: 10,
+                    OutputProfile(
+                      text:
+                          'Jl. Kaliurang No 10, Gondangan, Sardonoharjo, Ngaglik, Sleman, DIY',
+                      tinggi: 60.0,
+                      jarak: 6.0,
                     ),
                   ],
                 ),
