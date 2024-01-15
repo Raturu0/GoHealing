@@ -4,98 +4,97 @@
 # GoHealing
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/icon.png?raw=true)
 
-GoHealing adalah aplikasi revolusioner yang menghadirkan kemudahan dalam merencanakan 
-dan mengatur perjalanan rekreasi pengguna. Beberapa fitur yang dimiliki aplikasi ini adalah :
-- Pemesanan tiket rekreasi secara online, GoHealing membuat pengguna mudah dalam mendapatkan 
-tempat wisata bahkan dalam genggaman HP. 
-- Toko souvenir. Jika pemilik wisata memiliki toko sovenir official, maka akan disediakan juga dalam 
-aplikasi ini sehingga pengguna tidak perlu repot-repot dalam mencari souvenir karena sudah disediakan 
-langsung disini.
-Aplikasi ini memiliki memiliki penyelesaian untuk 3 dari 17 topik SDGs PBB, diantaranya : 
-1. Poin ke-8, Decent Work and Economic Growth.
-Membantu UMKM masyarakat karena semakin ramai sebuah tempat wisata, maka 
-akan membuka banyak lapangan kerja baru untuk masyarakat sekitar juga. Selain itu, dengan adanya aplikasi ini akan membantu banyak tempat-tempat wisata yang belum terlalu dikenal sehingga memberikan kesempatan bagi penyedia wisata untuk mendaftarkan tempat wisatanya ke aplikasi GoHealing, sehingga mereka bisa mempromosikan dan meramaikan tempat wisatanya. 
-2. Poin ke-13, Climate Action.
-Dengan mengurangi penggunaan kertas, kita dapat mengurangi deforestasi dan dampak 
-ekologisnya. Hal ini sejalan dengan upaya mengurangi emisi karbon yang dapat 
-menyebabkan perubahan iklim.
-3. Poin ke-15, Life on Land
-Dengan mengurangi penggunaan kertas pada tiket, inovasi ini nantinya juga bisa untuk 
-memitigasi dampak negatif terhadap kehidupan yang ada di darat, seperti mendukung 
-pelestarian habitat alami dan mempertahankan keanekaragaman hayati.
-Pada akhirnya, pengguna nantinya dapat menikmati pengalaman memesan tiket yang cepat dan 
-efisien, serta menjelajahi wisata dengan lebih mudah dan menyenangkan
-
+GoHealing is a revolutionary application that makes planning easy
+and organize user leisure trips. Some of the features this application has are:
+- Ordering recreational tickets online, GoHealing makes it easy for users to get them
+tourist attractions even in the palm of your cell phone.
+- Souvenir shop. If the tour owner has an official souvenir shop, it will also be provided inside
+This application means that users don't need to bother looking for souvenirs because they are already provided
+right here.
+This application has solutions for 3 of the 17 UN SDGs topics, including:
+1. Point 8, Decent Work and Economic Growth.
+Helping community MSMEs because tourist attractions are getting busier, then
+will open up many new job opportunities for the surrounding community as well. Apart from that, this application will help many tourist attractions that are not well known, thereby providing an opportunity for tourism providers to register their tourist attractions on the GoHealing application, so that they can promote and enliven their tourist attractions.
+2. Point 13, Climate Action.
+By reducing paper use, we can reduce deforestation and impacts
+ecological. This is in line with efforts to reduce carbon emissions
+causing climate change.
+3. Point 15, Life on Land
+By reducing the use of paper on tickets, this innovation will also be possible
+mitigating negative impacts on life on land, such as supporting
+preserving natural habitats and maintaining biodiversity.
+In the end, users will be able to enjoy a fast and fast ticket ordering experience
+efficiently, as well as exploring tourism more easily and pleasantly
 ## Features
 
-- Pemesanan Tiket
-- Pemesanan Souvenir Official
-
+- Ticket reservations
+- Order Official Souvenirs
+  
 ## Tech
-- [VSCODE](https://www.figma.com/) - Tools utama untuk mengoding tentunya
-- [FLUTTER](flutter.io) - Tools merancang aplikasi
-- [PackagaDlutter](pub.dev) - Package-package yang mempermudah perancangan aplikasi
-- [AndroidStudio](https://developer.android.com/studio) - SDK dan simulator android
-- [Figma](https://developer.android.com/studio) - Perancangan UI dan UX
-- [Firebase](https://firebase.google.com/) - manajemen dan penyimpanan data real-time
+- [VSCODE](https://www.figma.com/) -The main tool for coding of course
+- [FLUTTER](flutter.io) - Application design tools
+- [PackagaDlutter](pub.dev) - Packages that make application design easier
+- [AndroidStudio](https://developer.android.com/studio) - SDK and android simulator
+- [Figma](https://developer.android.com/studio) - UI and UX design
+- [Firebase](https://firebase.google.com/) - real-time data management and storage
 
-## Persiapan
+## Preparation
 - ### Android Studio
-Download Android Studio dan beberapa SDK yang diperlukan sesuai dengan perangkat Anda. Anda dapat mendownload nya di  [sini](https://developer.android.com/studio). Setelah mendownload, jangan lupa untuk menambah environment ke system path sesuai dengan petunjuk.
+Download Android Studio and some required SDKs according to your device. You can download it [here](https://developer.android.com/studio). After downloading, don't forget to add the environment to the system path according to the instructions.
 
 - ### Flutter 
-Download juga untuk Flutter nya di [sini](https://docs.flutter.dev/get-started/install). Pilih sesuai dengan perangkat Anda dan jangan lupa menambah environment bin ke system path Anda.
+Also download Flutter at [here](https://docs.flutter.dev/get-started/install). Choose according to your device and don't forget to add the environment bin to your system path.
 
-## Instalasi
-- Fork repository kami atau clone dengan perintah :
+## Instalation
+- Fork our repository or clone with the command:
 ```sh
 git clone https://github.com/Raturu0/GoHealing.git
 ```
-- Download dan dapatkan dependensi di file pubspec.yaml dengan perintah
+- Download and get the dependencies in the pubspec.yaml file with the command
 ```sh
 flutter pub get
 ```
-- Pilih device di bagian pojok kanan, lalu pilih sesuai dengan keinginan, bisa real device, chrome, atau simulator Android Studio
-- Jalankan aplikasi dengan perintah :
+- Select the device in the right corner, then choose according to your wishes, it can be real device, chrome, or the Android Studio simulator
+- Run the application with the command:
 ```sh
 flutter run
 ```
 
 
-# LAYOUT APLIKASI
-Berikut kami tampilkan beberapa tampilan dari aplikasi yang kami desain ...
+# APPLICATION LAYOUTS
+Below we show several views of the applications we designed...
 <br>
 
-### Keterangan : Jika terdapat banner DEBUG di pojok kanan atas, berarti itu adalah tampilan dari hasil developer, namun jika tidak ada berarti itu merupakan tampilan dari Figma yang rencananya akan didevelop juga...Berikut kami tampilkan progress yang sudah kami jalankan dan beberapa hal yang akan kami rencanakan kedepan :
+### Description: If there is a DEBUG banner in the top right corner, it means it is a display of the developer's results, but if there is none it means it is a display of Figma which is planned to be developed as well... Below we show the progress we have made and several things that will be we plan for the future:
 <br>
 
-### Login dan Register
+### Login and Register
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/login.jpg?raw=true)
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/register.jpg?raw=true)
 
 
-### Menu utama dari aplikasi :
+### Main menu of the application :
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/beranda.jpg?raw=true)
 
-Memiliki 5 navigasi, diantaranya :
+Has 5 navigations, including:
 1. Home <br>
-2. Souvenir <br>
-3. Wisata <br>
+2. Souvenirs <br>
+3. Tourism <br>
 4. History <br>
 5. Profile
 <br>
 
-### Pencarian Souvenir dan Detail Souvenir :
+### Souvenir Search and Souvenir Details :
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/souvenir.jpg)
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/detailsouvenir.jpg)
 <br>
-Keterangan : Data yang ada di atas sudah terintegrasikan dengan Firebase, berupa nama Souvenir, deskripsi, harga, dan lain-lain. Rencananya data ini dikirim oleh penyedia wisata yang mendaftar pada aplikasi dan dimasukkan ke firebase oleh si Developer.
+Description: The data above has been integrated with Firebase, in the form of souvenir names, descriptions, prices, etc. The plan is for this data to be sent by tourism providers who register with the application and entered into Firebase by the developer.
 
-### Pencarian Wisata dan Detail Wisata :
+### Tour Search and Tour Details :
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/wisata.jpg?raw=true)
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/detailwisata.jpg?raw=true)
 <br>
-Keterangan : Data yang ada di atas sudah terintegrasikan dengan Firebase, berupa nama tempat, deskripsi, harga, dan lain-lain. Rencananya data ini dikirim oleh penyedia wisata yang mendaftar pada aplikasi dan dimasukkan ke firebase oleh si Developer.
+Description: The data above has been integrated with Firebase, in the form of place names, descriptions, prices, etc. The plan is for this data to be sent by tourism providers who register with the application and entered into Firebase by the developer.
 
 ### History :
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/history.jpg?raw=true)
@@ -108,20 +107,18 @@ Keterangan : Data yang ada di atas sudah terintegrasikan dengan Firebase, berupa
 <br>
 
 # FIRESTORE DATABASE 
-Berikut kami lampirkan mengenai firestore database yang kami gunakan sekarang ini :
+Below we attach the Firestore database that we are currently using :
 ![alt text](https://github.com/Raturu0/GoHealing/blob/main/assets/readme/db.jpeg?raw=true)
 <br>
-Disini, kami sementara membuat 3 collection, yaitu untuk :
+Here, we are currently creating 3 collections, namely for:
 - DB_order
-- DB_wisata
+- DB_tourism
 - DB_souvenir
 <br>
-Yang dimana isi dari setiap collection ini nantinya akan diintegrasikan dengan layout pada aplikasi, sehingga aplikasi bisa menampilkan informasi secara fleksibel dan realtime dengan bantuan firestore database ini.
+Where the contents of each collection will later be integrated with the layout of the application, so that the application can display information flexibly and in real time with the help of this Firestore database.
 
-
-# RENCANA HAL-HAL YANG AKAN DITAMBAHKAN :
-- Halaman Bagi Admin/Penyedia wisata (Login, Register, Dashboard, chat, Edit Informasi wisata dan souvenir)
-- Chat Pengguna dengan Admin tempat wisata
-
+# PLAN OF THINGS THAT WILL BE ADDED:
+- Page for Admin/Tourist Providers (Login, Register, Dashboard, chat, Edit tourist and souvenir information)
+- User chat with tourist attraction admin
 
 
