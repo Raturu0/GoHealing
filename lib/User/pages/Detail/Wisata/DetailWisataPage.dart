@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gohealing/User/pages/Detail/Souvenir/OfficialSouvenirPage.dart';
+import 'package:gohealing/User/pages/Pembayaran/PembayaranTiket.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DetailWisataPage extends StatefulWidget {
@@ -196,6 +197,11 @@ class _DetailWisataPageState extends State<DetailWisataPage> {
                                 ),
                                 onPressed: () {
                                   print("klik beli");
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => PembayaranTiket(),
+                                      ));
                                 },
                                 child: Text(
                                   "Beli Tiket",
