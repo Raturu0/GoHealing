@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
 import 'package:gohealing/TEST/WidgetTest.dart';
 import 'package:gohealing/User/pages/Detail/Tiket/DetalTiketPage.dart';
+import 'package:gohealing/User/pages/Pin/PinPage.dart';
 import 'dart:async';
 import 'firebase_options.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BottomConvexBarr(),
+      home: DetailTiketPage(),
     );
   }
 }

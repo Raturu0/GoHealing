@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:gohealing/User/pages/Home/HomePage.dart';
 import 'package:gohealing/User/pages/ListWisataPage.dart';
-import 'package:gohealing/User/pages/Order/HistoryPage.dart';
+import 'package:gohealing/User/pages/Historyy/HistoryPage.dart';
 import 'package:gohealing/User/pages/ProfilePage/ProfilePage.dart';
 import 'package:gohealing/User/pages/Souvenir/ListSouvenirPage.dart';
 
