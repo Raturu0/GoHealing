@@ -198,10 +198,14 @@ class _DetailWisataPageState extends State<DetailWisataPage> {
                                 onPressed: () {
                                   print("klik beli");
                                   Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => PembayaranTiket(),
-                                      ));
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => PembayaranTiket(
+                                        tempatWisataData:
+                                            widget.tempatWisataData,
+                                      ),
+                                    ),
+                                  );
                                 },
                                 child: Text(
                                   "Beli Tiket",
