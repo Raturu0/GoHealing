@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
-import 'package:gohealing/TEST/WidgetTest.dart';
-import 'package:gohealing/User/pages/Detail/Tiket/DetalTiketPage.dart';
-import 'package:gohealing/User/pages/Pin/PinPage.dart';
 import 'package:gohealing/User/pages/RegisterPage/RegisterPage.dart';
-import 'dart:async';
-import 'firebase_options.dart';
+import 'package:gohealing/firebase_options.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,54 +20,15 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: RegisterPage(),
-    );
+    // sudah login?
+    if (FirebaseAuth.instance.currentUser != null) {
+      return MaterialApp(
+        home: BottomConvexBarr(),
+      );
+    } else {
+      return MaterialApp(
+        home: RegisterPage(),
+      );
+    }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import "package:flutter/material.dart";
-// import "package:firebase_core/firebase_core.dart";
-// import "package:gohealing/BottomConvexBarr/BottomConvexBarr.dart";
-// import 'dart:async';
-
-// import "package:gohealing/firebase_options.dart";
-// // Semisal dari Reiki menambah di baris ini
-// //  INI ADA TIDAK
-
-// Future<void> main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   await Firebase.initializeApp(
-//     options: DefaultFirebaseOptions.currentPlatform,
-//   );
-//   runApp(MyApp());
-// }
-
-// class MyApp extends StatefulWidget {
-//   const MyApp({super.key});
-
-//   @override
-//   State<MyApp> createState() => _MyAppState();
-// }
-
-// class _MyAppState extends State<MyApp> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: BottomConvexBarr(),
-//     );
-//   }
-// }
