@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import "package:flutter/material.dart";
 import "package:gohealing/Developer/Manual/Developerr.dart";
 import "package:gohealing/User/pages/LoginPage/LoginPage.dart";
@@ -13,6 +14,8 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -66,11 +69,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     IconButton(
                         onPressed: () {
                           print("klik logout");
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => LoginPage(),
-                              ));
+                          FirebaseAuth.instance.signOut();
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(),));
+                          
                         },
                         icon: Icon(Icons.logout))
                   ],

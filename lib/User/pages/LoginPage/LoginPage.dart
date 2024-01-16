@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
 import 'package:gohealing/User/pages/RegisterPage/RegisterPage.dart';
 import 'package:gohealing/User/widgets/shapeOfLogin.dart';
+import 'package:gohealing/providers/FirebaseAuthService.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
@@ -11,8 +14,20 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController emailC = TextEditingController();
-  TextEditingController passC = TextEditingController();
+final FirebaseAuthService _auth = FirebaseAuthService();
+
+  TextEditingController _emailC = TextEditingController();
+  TextEditingController _passC = TextEditingController();
+
+
+  @override
+  void dispose() {
+    _emailC.dispose();
+    _passC.dispose();
+    super.dispose();
+  }
+
+
 
   Color textColor = Colors.black;
 
@@ -84,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                           width: double.infinity,
                           height: 80,
                           child: TextField(
-                            controller: emailC,
+                            controller: _emailC,
                             textInputAction: TextInputAction.next,
                             keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
@@ -110,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: 80,
                           padding: EdgeInsets.only(left: 10, right: 10),
                           child: TextField(
-                            controller: passC,
+                            controller: _passC,
                             textInputAction: TextInputAction.done,
                             keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
@@ -161,13 +176,9 @@ class _LoginPageState extends State<LoginPage> {
                               backgroundColor: Color(0xFF2839CD),
                             ),
                             onPressed: () {
-                              // Your login logic here
                               print("Login button pressed");
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => RegisterPage(),
-                                  ));
+                              _signIn();
+                            
                             },
                             child: Container(
                               width: 100,
@@ -219,5 +230,24 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+
+  }
+
+  
+  void _signIn() async {
+    String email = _emailC.text;
+    String password = _passC.text;
+
+    User? user = await _auth.signInWithEmailAndPassword(email, password);
+    if (user != null) {
+      print("user success sign in");
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => BottomConvexBarr(),
+          ));
+    } else {
+      print("some ror sign");
+    }
   }
 }
