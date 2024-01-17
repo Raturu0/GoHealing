@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
 
 class DashedDivider extends StatelessWidget {
   @override
@@ -76,6 +77,12 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
         leading: IconButton(
           onPressed: () {
             print("klik panah");
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => BottomConvexBarr(),
+              ),
+            );
           },
           icon: Icon(Icons.arrow_back),
         ),
@@ -112,7 +119,6 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
                         Container(
                           height: MediaQuery.of(context).size.height * (0.5),
                           child: ClipRRect(
-                            
                             borderRadius: BorderRadius.vertical(
                               top: Radius.circular(20.0),
                               bottom: Radius.circular(20.0),
@@ -167,8 +173,8 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 0),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -188,8 +194,7 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
                               children: [
                                 Text(
                                   "Borobudur, Magelang",
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.bold),
+                                  style: TextStyle(fontWeight: FontWeight.bold),
                                 )
                               ],
                             )
@@ -231,8 +236,7 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             Text("Isabel Kurniawan",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold))
+                                style: TextStyle(fontWeight: FontWeight.bold))
                           ],
                         ),
                         Row(
@@ -243,8 +247,7 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             Text("23 Agustus 2023 23:59",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold))
+                                style: TextStyle(fontWeight: FontWeight.bold))
                           ],
                         ),
                         Row(
@@ -255,13 +258,11 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             Text("A3cY?6d98re2uwef",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold))
+                                style: TextStyle(fontWeight: FontWeight.bold))
                           ],
                         ),
                         SizedBox(
-                          height:
-                              MediaQuery.of(context).size.height * (0.05),
+                          height: MediaQuery.of(context).size.height * (0.05),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(10),
@@ -296,8 +297,7 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
                         child: Text(
                           "Download Tiket",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                              fontWeight: FontWeight.bold, color: Colors.white),
                         ),
                       ),
                     ],

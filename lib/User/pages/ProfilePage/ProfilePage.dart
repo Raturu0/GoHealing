@@ -14,8 +14,6 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-
-  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -70,8 +68,11 @@ class _ProfilePageState extends State<ProfilePage> {
                         onPressed: () {
                           print("klik logout");
                           FirebaseAuth.instance.signOut();
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(),));
-                          
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => LoginPage(),
+                              ));
                         },
                         icon: Icon(Icons.logout))
                   ],
