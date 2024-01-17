@@ -6,18 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 
-class DashedDivider extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 1.0,
-      width: double.infinity,
-      child: CustomPaint(
-        painter: DashedLinePainter(),
-      ),
-    );
-  }
-}
+
 
 class DetailTiketPage extends StatefulWidget {
   const DetailTiketPage({Key? key}) : super(key: key);
@@ -307,6 +296,19 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class DashedDivider extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 1.0,
+      width: double.infinity,
+      child: CustomPaint(
+        painter: DashedLinePainter(),
       ),
     );
   }

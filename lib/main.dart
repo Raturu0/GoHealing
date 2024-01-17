@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
+import 'package:gohealing/User/BottomConvexBarr/BottomConvexBarr.dart';
+import 'package:gohealing/TEST/WidgetTest.dart';
+import 'package:gohealing/User/pages/Pin/PinPage.dart';
+import 'package:gohealing/User/pages/ProfilePage/ProfilePage.dart';
 import 'package:gohealing/User/pages/RegisterPage/RegisterPage.dart';
 import 'package:gohealing/firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -10,6 +13,7 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  
 
   // Tambahkan penundaan 2 detik sebelum memanggil runApp
   await Future.delayed(Duration(seconds: 1), () {
@@ -30,5 +34,9 @@ class MyApp extends StatelessWidget {
         home: RegisterPage(),
       );
     }
+
+  //   return MaterialApp(
+  //     home: BottomConvexBarr(),
+  //   );
   }
 }

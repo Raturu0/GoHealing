@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
+import 'package:gohealing/User/BottomConvexBarr/BottomConvexBarr.dart';
 import 'package:gohealing/User/pages/RegisterPage/RegisterPage.dart';
 import 'package:gohealing/User/widgets/shapeOfLogin.dart';
 import 'package:gohealing/providers/FirebaseAuthService.dart';

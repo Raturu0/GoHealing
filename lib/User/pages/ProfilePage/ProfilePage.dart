@@ -5,6 +5,7 @@ import "package:gohealing/User/pages/LoginPage/LoginPage.dart";
 import 'package:gohealing/User/widgets/shapeOfProfile.dart';
 import 'package:gohealing/User/widgets/NamaProfil.dart';
 import 'package:gohealing/User/widgets/OutputProfile.dart';
+import 'package:gohealing/data/UserData.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -18,6 +19,8 @@ class _ProfilePageState extends State<ProfilePage> {
   
   @override
   Widget build(BuildContext context) {
+        // Mendapatkan pengguna saat ini
+    User? user = FirebaseAuth.instance.currentUser;
     return Padding(
       padding: EdgeInsets.only(
           left: MediaQuery.of(context).size.width * (0.06),
@@ -114,7 +117,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     NamaProfil(text: 'Nama'),
-                    OutputProfile(text: 'Saber Nathan Khalid'),
+                    OutputProfile(text: UserData.username),
                     SizedBox(
                       height: 10,
                     ),
@@ -131,7 +134,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       height: 10,
                     ),
                     NamaProfil(text: 'Alamat E-mail'),
-                    OutputProfile(text: 'mangeak30@gmail.com'),
+                    OutputProfile(text: '${user?.email ?? "N/A"}'),
                     SizedBox(
                       height: 10,
                     ),

@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:gohealing/BottomConvexBarr/BottomConvexBarr.dart";
+import 'package:gohealing/User/BottomConvexBarr/BottomConvexBarr.dart';
 import "package:pinput/pinput.dart";
 
 class PinPage extends StatefulWidget {
@@ -22,8 +22,9 @@ class _PinPageState extends State<PinPage> {
           color: Color.fromRGBO(30, 60, 87, 1),
           fontWeight: FontWeight.w600),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.black),
-        borderRadius: BorderRadius.circular(20),
+        color: Colors.amber,
+        border: Border.all(color: Color(0xFFBFC4F0)),
+        borderRadius: BorderRadius.circular(10),
       ),
     );
 
@@ -36,7 +37,7 @@ class _PinPageState extends State<PinPage> {
 
     final submittedPinTheme = defaultPinTheme.copyWith(
       decoration: defaultPinTheme.decoration?.copyWith(
-        color: Color.fromRGBO(234, 239, 243, 1),
+        color: Colors.amber,
       ),
     );
 

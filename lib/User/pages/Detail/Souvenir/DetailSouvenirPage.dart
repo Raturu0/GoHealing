@@ -51,6 +51,7 @@ class _DetailSouvenirPageState extends State<DetailSouvenirPage> {
           ),
           Align(
             alignment: Alignment.centerLeft,
+
             child: Padding(
               padding: EdgeInsets.all(20),
               child: Column(

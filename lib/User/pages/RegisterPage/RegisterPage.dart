@@ -1,8 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:gohealing/User/BottomConvexBarr/BottomConvexBarr.dart';
 import 'package:gohealing/User/pages/LoginPage/LoginPage.dart';
 import 'package:gohealing/User/widgets/shapeOfLogin.dart';
+import 'package:gohealing/data/UserData.dart';
 import 'package:gohealing/providers/FirebaseAuthService.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,7 +21,6 @@ class _LoginPageState extends State<RegisterPage> {
   TextEditingController _emailC = TextEditingController();
   TextEditingController _passC = TextEditingController();
 
-
   @override
   void dispose() {
     _usernameC.dispose();
@@ -29,11 +29,6 @@ class _LoginPageState extends State<RegisterPage> {
     super.dispose();
   }
 
-
-    // Delay 1 detik dan kembalikan warna ke biru
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,8 +36,7 @@ class _LoginPageState extends State<RegisterPage> {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding:
-                const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 20),
+            padding: const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 20),
             child: Column(
               children: [
                 Container(
@@ -64,7 +58,7 @@ class _LoginPageState extends State<RegisterPage> {
                       painter: RPSCustomPainter(),
                     ),
                     Positioned(
-                      top: 30, // Sesuaikan nilai ini sesuai kebutuhan
+                      top: 30,
                       child: Container(
                         width: 125,
                         height: 125,
@@ -86,8 +80,7 @@ class _LoginPageState extends State<RegisterPage> {
                         Container(
                           width: double.infinity,
                           height: 100,
-                          padding:
-                              EdgeInsets.only(top: 50, left: 10, right: 10),
+                          padding: EdgeInsets.only(top: 50, left: 10, right: 10),
                           child: TextField(
                             controller: _usernameC,
                             textInputAction: TextInputAction.next,
@@ -176,9 +169,7 @@ class _LoginPageState extends State<RegisterPage> {
                               backgroundColor: Color(0xFF2839CD),
                             ),
                             onPressed: () {
-                              // Your login logic here
-                              print("REG button pressed");
-
+                              // Panggil metode _signUp
                               _signUp();
                             },
                             child: Container(
@@ -202,10 +193,11 @@ class _LoginPageState extends State<RegisterPage> {
                           ElevatedButton(
                             onPressed: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => LoginPage(),
-                                  ));
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LoginPage(),
+                                ),
+                              );
                             },
                             child: Container(
                               width: 100,
@@ -214,8 +206,9 @@ class _LoginPageState extends State<RegisterPage> {
                                 child: Text(
                                   'LOGIN',
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                  ),
                                 ),
                               ),
                             ),
@@ -234,20 +227,23 @@ class _LoginPageState extends State<RegisterPage> {
   }
 
   void _signUp() async {
-    String username = _usernameC.text;
     String email = _emailC.text;
     String password = _passC.text;
+
+    // Simpan nilai username
+    UserData.username = _usernameC.text;
 
     User? user = await _auth.signUpWithEmailAndPassword(email, password);
     if (user != null) {
       print("user success created");
       Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => LoginPage(),
-          ));
+        context,
+        MaterialPageRoute(
+          builder: (context) => LoginPage(),
+        ),
+      );
     } else {
-      print("some ror");
+      print("some error");
     }
   }
 }
