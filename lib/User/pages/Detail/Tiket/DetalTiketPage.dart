@@ -2,12 +2,10 @@ import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:gohealing/User/BottomConvexBarr/BottomConvexBarr.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
-import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
-
-
 
 class DetailTiketPage extends StatefulWidget {
   const DetailTiketPage({Key? key}) : super(key: key);
@@ -90,6 +88,14 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
                   top: Radius.circular(20.0),
                   bottom: Radius.circular(20.0),
                 ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.3),
+                    spreadRadius: 1,
+                    blurRadius: 5,
+                    offset: Offset(0, 3),
+                  ),
+                ],
               ),
               child: Column(
                 children: [

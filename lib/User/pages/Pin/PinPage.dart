@@ -1,9 +1,13 @@
 import "package:flutter/material.dart";
 import 'package:gohealing/User/BottomConvexBarr/BottomConvexBarr.dart';
+import "package:gohealing/User/pages/tiketBerhasil/tiketBerhasilPage.dart";
 import "package:pinput/pinput.dart";
 
 class PinPage extends StatefulWidget {
-  const PinPage({super.key});
+  final Map<String, dynamic>? tempatWisataData;
+
+  const PinPage({Key? key, required this.tempatWisataData})
+      : super(key: key);
 
   @override
   State<PinPage> createState() => _PinPageState();
@@ -69,9 +73,12 @@ class _PinPageState extends State<PinPage> {
               onCompleted: (pin) {
                 if (pin == "2222") {
                   // Jika pin benar, navigasi ke halaman baru
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => BottomConvexBarr()),
+                    MaterialPageRoute(builder: (context) => TiketBerhasilPage(
+                                    tempatWisataData: widget.tempatWisataData,
+
+                    )),
                   );
                 } else {
                   print("Pin salah!",);

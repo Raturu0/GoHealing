@@ -1,7 +1,7 @@
 import 'package:dotted_decoration/dotted_decoration.dart';
 import 'package:flutter/material.dart';
-import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:gohealing/User/BottomConvexBarr/BottomConvexBarr.dart';
 import 'package:gohealing/User/pages/Detail/Tiket/DetalTiketPage.dart';
 
 class TiketBerhasilPage extends StatefulWidget {

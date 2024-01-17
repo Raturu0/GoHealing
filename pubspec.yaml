@@ -41,7 +41,6 @@ dependencies:
     sdk: flutter
   flutter_native_splash: ^2.3.9
   flutter_svg_provider: ^1.0.7
-  geolocator: ^10.1.0
   google_fonts: ^6.1.0
   image: ^4.1.4
   image_gallery_saver: ^2.0.3

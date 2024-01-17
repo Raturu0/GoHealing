@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:gohealing/User/pages/Detail/Tiket/DetalTiketPage.dart";
 import 'package:gohealing/User/dummyData/DBmetodePemabayaran.dart';
+import 'package:gohealing/User/pages/Pin/PinPage.dart';
 import 'package:intl/intl.dart';
 import 'package:gohealing/User/pages/tiketBerhasil/tiketBerhasilPage.dart';
 
@@ -80,19 +81,9 @@ class _PembayaranTiketState extends State<PembayaranTiket> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: IconButton(
-                onPressed: () {
-                  print("klik ke detail");
-
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => DetailTiketPage(),
-                      ));
-                },
-                icon: Icon(Icons.payment_rounded)),
           )
         ],
+        centerTitle: true,
         title: Text("Pembayaran"),
         // ABIS PAGE INI, BAKALAN NGARAH KE DETAIL TIKET PAK LEWAT TOMBOL INI
       ),
@@ -432,7 +423,7 @@ class _PembayaranTiketState extends State<PembayaranTiket> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => TiketBerhasilPage(
+                                  builder: (context) => PinPage(
                                     tempatWisataData: widget.tempatWisataData,
                                   ),
                                 ),
