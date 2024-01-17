@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:gohealing/BottomConvexBarr/BottomConvexBarr.dart';
 import 'package:gohealing/User/pages/LoginPage/LoginPage.dart';
 import 'package:gohealing/User/widgets/shapeOfLogin.dart';
+import 'package:gohealing/providers/FirebaseAuthService.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -11,23 +14,25 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<RegisterPage> {
-  TextEditingController emailC = TextEditingController();
-  TextEditingController passC = TextEditingController();
+  final FirebaseAuthService _auth = FirebaseAuthService();
 
-  Color textColor = Colors.black;
+  TextEditingController _usernameC = TextEditingController();
+  TextEditingController _emailC = TextEditingController();
+  TextEditingController _passC = TextEditingController();
 
-  void changeColor() {
-    setState(() {
-      textColor = Colors.red;
-    });
+
+  @override
+  void dispose() {
+    _usernameC.dispose();
+    _emailC.dispose();
+    _passC.dispose();
+    super.dispose();
+  }
+
 
     // Delay 1 detik dan kembalikan warna ke biru
-    Future.delayed(Duration(seconds: 1), () {
-      setState(() {
-        textColor = Colors.black;
-      });
-    });
-  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +89,7 @@ class _LoginPageState extends State<RegisterPage> {
                           padding:
                               EdgeInsets.only(top: 50, left: 10, right: 10),
                           child: TextField(
-                            controller: passC,
+                            controller: _usernameC,
                             textInputAction: TextInputAction.next,
                             keyboardType: TextInputType.text,
                             decoration: InputDecoration(
@@ -112,7 +117,7 @@ class _LoginPageState extends State<RegisterPage> {
                           width: double.infinity,
                           height: 50,
                           child: TextField(
-                            controller: emailC,
+                            controller: _emailC,
                             textInputAction: TextInputAction.next,
                             keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
@@ -140,7 +145,7 @@ class _LoginPageState extends State<RegisterPage> {
                           height: 80,
                           padding: EdgeInsets.only(left: 10, right: 10),
                           child: TextField(
-                            controller: passC,
+                            controller: _passC,
                             textInputAction: TextInputAction.done,
                             keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
@@ -172,12 +177,9 @@ class _LoginPageState extends State<RegisterPage> {
                             ),
                             onPressed: () {
                               // Your login logic here
-                              print("Login button pressed");
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => LoginPage(),
-                                  ));
+                              print("REG button pressed");
+
+                              _signUp();
                             },
                             child: Container(
                               width: 100,
@@ -229,5 +231,23 @@ class _LoginPageState extends State<RegisterPage> {
         ),
       ),
     );
+  }
+
+  void _signUp() async {
+    String username = _usernameC.text;
+    String email = _emailC.text;
+    String password = _passC.text;
+
+    User? user = await _auth.signUpWithEmailAndPassword(email, password);
+    if (user != null) {
+      print("user success created");
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => LoginPage(),
+          ));
+    } else {
+      print("some ror");
+    }
   }
 }

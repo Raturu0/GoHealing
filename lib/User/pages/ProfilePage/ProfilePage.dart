@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import "package:flutter/material.dart";
 import "package:gohealing/Developer/Manual/Developerr.dart";
 import "package:gohealing/User/pages/LoginPage/LoginPage.dart";
@@ -66,6 +67,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     IconButton(
                         onPressed: () {
                           print("klik logout");
+                          FirebaseAuth.instance.signOut();
                           Navigator.push(
                               context,
                               MaterialPageRoute(
