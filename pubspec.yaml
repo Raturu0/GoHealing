@@ -33,6 +33,7 @@ dependencies:
   convex_bottom_bar: ^3.2.0
   cupertino_icons: ^1.0.2
   dio: ^5.4.0
+  dotted_decoration: ^2.0.0
   firebase_auth: ^4.16.0
   firebase_core: ^2.24.2
   firebase_storage: ^11.6.0
