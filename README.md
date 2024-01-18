@@ -79,7 +79,7 @@ Below we show several views of the applications we designed...
 Has 5 navigations, including:
 1. Home <br>
 2. Souvenirs <br>
-3. Tourism <br>
+3. Wisata <br>
 4. History <br>
 5. Profile
 <br>
