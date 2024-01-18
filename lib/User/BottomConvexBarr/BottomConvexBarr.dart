@@ -39,7 +39,7 @@ class _BottomConvexBarrState extends State<BottomConvexBarr> {
               TabItem(icon: Icons.card_giftcard_rounded, title: 'Souvenir'),
               TabItem(icon: Icons.search, title: 'Wisata'),
               TabItem(icon: Icons.home, title: 'Home'),
-              TabItem(icon: Icons.shopping_cart, title: 'History'),
+              TabItem(icon: Icons.shopping_cart, title: 'Cart'),
               TabItem(icon: Icons.person, title: 'Profile'),
             ],
             onTap: (int i) {
