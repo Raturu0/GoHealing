@@ -125,14 +125,14 @@ class _ProfilePageState extends State<ProfilePage> {
                     NamaProfil(text: 'Bio'),
                     OutputProfile(
                         text:
-                            'Yang penting win streak. Bismillah glory berkah'),
+                            ''),
                     SizedBox(
                       height: 10,
                     ),
                     NamaProfil(text: 'Nomor Handphone'),
-                    OutputProfile(text: '0857 - 9876 - 9325'),
+                    OutputProfile(text: ''),
                     SizedBox(
-                      height: 10,
+                    height: 10,
                     ),
                     NamaProfil(text: 'Alamat E-mail'),
                     OutputProfile(text: '${user?.email ?? "N/A"}'),
@@ -146,7 +146,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     OutputProfile(
                       text:
-                          'Jl. Kaliurang No 10, Gondangan, Sardonoharjo, Ngaglik, Sleman, DIY',
+                          '',
                       tinggi: 60.0,
                       jarak: 6.0,
                     ),

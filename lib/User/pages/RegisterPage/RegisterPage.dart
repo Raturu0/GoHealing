@@ -21,7 +21,6 @@ class _LoginPageState extends State<RegisterPage> {
   TextEditingController _emailC = TextEditingController();
   TextEditingController _passC = TextEditingController();
 
-  // Tambahkan state boolean
   bool obscurePassword = true;
 
   @override

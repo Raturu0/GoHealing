@@ -19,6 +19,8 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController _emailC = TextEditingController();
   TextEditingController _passC = TextEditingController();
 
+  bool obscurePassword = true;
+
   @override
   void dispose() {
     _emailC.dispose();
@@ -48,8 +50,7 @@ class _LoginPageState extends State<LoginPage> {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding:
-                const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 20),
+            padding: const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 20),
             child: Column(
               children: [
                 Container(
@@ -91,8 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          padding:
-                              EdgeInsets.only(top: 30, left: 10, right: 10),
+                          padding: EdgeInsets.only(top: 30, left: 10, right: 10),
                           width: double.infinity,
                           height: 80,
                           child: TextField(
@@ -114,9 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: 20,
-                        ),
+                        SizedBox(height: 20),
                         Container(
                           width: double.infinity,
                           height: 80,
@@ -125,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                             controller: _passC,
                             textInputAction: TextInputAction.done,
                             keyboardType: TextInputType.emailAddress,
-                            obscureText: true, // Set input password
+                            obscureText: obscurePassword,
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
@@ -134,6 +132,18 @@ class _LoginPageState extends State<LoginPage> {
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               prefixIcon: Icon(Icons.key),
+                              suffixIcon: GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    obscurePassword = !obscurePassword;
+                                  });
+                                },
+                                child: Icon(
+                                  obscurePassword
+                                      ? Icons.visibility_off
+                                      : Icons.visibility,
+                                ),
+                              ),
                               contentPadding: EdgeInsets.symmetric(
                                 horizontal: 20,
                                 vertical: 10,

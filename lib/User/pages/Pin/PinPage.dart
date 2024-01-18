@@ -52,7 +52,7 @@ class _PinPageState extends State<PinPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Masukkan pin Anda ",
+              "Setel Pin Baru Anda ",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
             ),
             SizedBox(
