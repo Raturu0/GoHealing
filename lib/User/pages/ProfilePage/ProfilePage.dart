@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import "package:flutter/material.dart";
 import "package:gohealing/Developer/Manual/Developerr.dart";
+import 'package:gohealing/User/pages/Historyy/HistoryPage.dart';
+import 'package:gohealing/User/pages/Keranjang/KeranjangPage.dart';
 import "package:gohealing/User/pages/LoginPage/LoginPage.dart";
 import 'package:gohealing/User/widgets/shapeOfProfile.dart';
 import 'package:gohealing/User/widgets/NamaProfil.dart';
@@ -50,23 +52,21 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * (0.4),
+                  width: MediaQuery.of(context).size.width * (0.03),
+                ),
+                CircleAvatar(
+                  backgroundColor: Color(0xFF2839CD),
+                  child: IconButton(onPressed: () {
+                    print("klik history");
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => OrderPage(),));
+                  }, icon: Icon(Icons.history, color: Colors.white,))
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * (0.38),
                 ),
                 Row(
                   children: [
-                    IconButton(
-                        onPressed: () {
-                          print("klik developer");
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Developerr(),
-                              ));
-                        },
-                        icon: Icon(
-                          Icons.developer_mode,
-                          color: Colors.green[900],
-                        )),
+                   
                     IconButton(
                         onPressed: () {
                           print("klik logout");

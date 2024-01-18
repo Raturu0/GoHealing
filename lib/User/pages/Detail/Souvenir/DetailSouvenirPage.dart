@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gohealing/User/pages/Detail/PemesananSouvenir/DetailPemesananSouvenirPage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DetailSouvenirPage extends StatefulWidget {
@@ -51,7 +52,6 @@ class _DetailSouvenirPageState extends State<DetailSouvenirPage> {
           ),
           Align(
             alignment: Alignment.centerLeft,
-
             child: Padding(
               padding: EdgeInsets.all(20),
               child: Column(
@@ -143,6 +143,12 @@ class _DetailSouvenirPageState extends State<DetailSouvenirPage> {
                                 ),
                                 onPressed: () {
                                   print("klik beli");
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            DetailPemesananSouvenirPage(),
+                                      ));
                                 },
                                 child: Text(
                                   "Beli Tiket",

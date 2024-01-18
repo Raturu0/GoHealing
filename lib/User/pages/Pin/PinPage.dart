@@ -26,7 +26,7 @@ class _PinPageState extends State<PinPage> {
           color: Color.fromRGBO(30, 60, 87, 1),
           fontWeight: FontWeight.w600),
       decoration: BoxDecoration(
-        color: Colors.amber,
+        color: Color(0xFFBFC4F0),
         border: Border.all(color: Color(0xFFBFC4F0)),
         borderRadius: BorderRadius.circular(10),
       ),

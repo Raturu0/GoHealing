@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:gohealing/User/pages/Home/HomePage.dart';
+import 'package:gohealing/User/pages/Keranjang/KeranjangPage.dart';
 import 'package:gohealing/User/pages/ListWisataPage.dart';
 import 'package:gohealing/User/pages/Historyy/HistoryPage.dart';
 import 'package:gohealing/User/pages/ProfilePage/ProfilePage.dart';
@@ -21,7 +22,7 @@ class _BottomConvexBarrState extends State<BottomConvexBarr> {
     ListSouvenirPage(),
     ListWisataPage(),
     HomePage(),
-    OrderPage(),
+    KeranjangPage(),
     ProfilePage()
   ];
 
@@ -38,7 +39,7 @@ class _BottomConvexBarrState extends State<BottomConvexBarr> {
               TabItem(icon: Icons.card_giftcard_rounded, title: 'Souvenir'),
               TabItem(icon: Icons.search, title: 'Wisata'),
               TabItem(icon: Icons.home, title: 'Home'),
-              TabItem(icon: Icons.list_alt_sharp, title: 'History'),
+              TabItem(icon: Icons.shopping_cart, title: 'History'),
               TabItem(icon: Icons.person, title: 'Profile'),
             ],
             onTap: (int i) {

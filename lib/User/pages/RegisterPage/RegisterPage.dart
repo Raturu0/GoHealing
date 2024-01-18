@@ -8,7 +8,7 @@ import 'package:gohealing/providers/FirebaseAuthService.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({super.key});
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
   State<RegisterPage> createState() => _LoginPageState();
@@ -20,6 +20,9 @@ class _LoginPageState extends State<RegisterPage> {
   TextEditingController _usernameC = TextEditingController();
   TextEditingController _emailC = TextEditingController();
   TextEditingController _passC = TextEditingController();
+
+  // Tambahkan state boolean
+  bool obscurePassword = true;
 
   @override
   void dispose() {
@@ -36,7 +39,8 @@ class _LoginPageState extends State<RegisterPage> {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 20),
+            padding: const EdgeInsets.only(
+                top: 5, left: 20, right: 20, bottom: 20),
             child: Column(
               children: [
                 Container(
@@ -141,6 +145,7 @@ class _LoginPageState extends State<RegisterPage> {
                             controller: _passC,
                             textInputAction: TextInputAction.done,
                             keyboardType: TextInputType.emailAddress,
+                            obscureText: obscurePassword, // Gunakan state ini di sini
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
@@ -151,6 +156,16 @@ class _LoginPageState extends State<RegisterPage> {
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               prefixIcon: Icon(Icons.key),
+                              suffixIcon: IconButton(
+                                icon: Icon(obscurePassword
+                                    ? Icons.visibility
+                                    : Icons.visibility_off),
+                                onPressed: () {
+                                  setState(() {
+                                    obscurePassword = !obscurePassword;
+                                  });
+                                },
+                              ),
                               contentPadding: EdgeInsets.symmetric(
                                 horizontal: 20,
                                 vertical: 10,

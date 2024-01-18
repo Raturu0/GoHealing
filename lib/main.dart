@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:gohealing/User/BottomConvexBarr/BottomConvexBarr.dart';
 import 'package:gohealing/TEST/WidgetTest.dart';
+import 'package:gohealing/User/pages/Detail/PemesananSouvenir/DetailPemesananSouvenirPage.dart';
+import 'package:gohealing/User/pages/Pembayaran/PembayaranTiket.dart';
 import 'package:gohealing/User/pages/Pin/PinPage.dart';
 import 'package:gohealing/User/pages/ProfilePage/ProfilePage.dart';
 import 'package:gohealing/User/pages/RegisterPage/RegisterPage.dart';
@@ -35,8 +37,9 @@ class MyApp extends StatelessWidget {
       );
     }
 
-  //   return MaterialApp(
-  //     home: BottomConvexBarr(),
-  //   );
+    // return MaterialApp(
+    //   home: DetailPemesananSouvenirPage(),
+    // );
+
   }
 }

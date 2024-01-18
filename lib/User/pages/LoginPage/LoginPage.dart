@@ -7,18 +7,17 @@ import 'package:gohealing/providers/FirebaseAuthService.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  const LoginPage({Key? key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-final FirebaseAuthService _auth = FirebaseAuthService();
+  final FirebaseAuthService _auth = FirebaseAuthService();
 
   TextEditingController _emailC = TextEditingController();
   TextEditingController _passC = TextEditingController();
-
 
   @override
   void dispose() {
@@ -26,8 +25,6 @@ final FirebaseAuthService _auth = FirebaseAuthService();
     _passC.dispose();
     super.dispose();
   }
-
-
 
   Color textColor = Colors.black;
 
@@ -74,7 +71,7 @@ final FirebaseAuthService _auth = FirebaseAuthService();
                       painter: RPSCustomPainter(),
                     ),
                     Positioned(
-                      top: 30, // Sesuaikan nilai ini sesuai kebutuhan
+                      top: 30,
                       child: Container(
                         width: 125,
                         height: 125,
@@ -128,6 +125,7 @@ final FirebaseAuthService _auth = FirebaseAuthService();
                             controller: _passC,
                             textInputAction: TextInputAction.done,
                             keyboardType: TextInputType.emailAddress,
+                            obscureText: true, // Set input password
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
@@ -152,11 +150,8 @@ final FirebaseAuthService _auth = FirebaseAuthService();
                         onTap: () {
                           // Aksi yang ingin diambil saat teks diklik
                           changeColor();
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => RegisterPage(),
-                              ));
+                          // TODO: Implementasi reset password
+                          // Anda dapat menambahkan fungsi untuk mengatur ulang kata sandi di sini
                         },
                         child: Text(
                           'Lupa password ?',
@@ -178,7 +173,6 @@ final FirebaseAuthService _auth = FirebaseAuthService();
                             onPressed: () {
                               print("Login button pressed");
                               _signIn();
-                            
                             },
                             child: Container(
                               width: 100,
@@ -201,10 +195,11 @@ final FirebaseAuthService _auth = FirebaseAuthService();
                           ElevatedButton(
                             onPressed: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => RegisterPage(),
-                                  ));
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RegisterPage(),
+                                ),
+                              );
                             },
                             child: Container(
                               width: 100,
@@ -230,10 +225,8 @@ final FirebaseAuthService _auth = FirebaseAuthService();
         ),
       ),
     );
-
   }
 
-  
   void _signIn() async {
     String email = _emailC.text;
     String password = _passC.text;
@@ -242,10 +235,11 @@ final FirebaseAuthService _auth = FirebaseAuthService();
     if (user != null) {
       print("user success sign in");
       Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => BottomConvexBarr(),
-          ));
+        context,
+        MaterialPageRoute(
+          builder: (context) => BottomConvexBarr(),
+        ),
+      );
     } else {
       print("some ror sign");
     }

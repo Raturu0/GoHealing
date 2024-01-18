@@ -3,6 +3,7 @@ import 'dart:ui' as ui;
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:gohealing/User/BottomConvexBarr/BottomConvexBarr.dart';
+import 'package:gohealing/User/pages/Home/HomePage.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
@@ -74,6 +75,11 @@ class _DetailTiketPageState extends State<DetailTiketPage> {
           icon: Icon(Icons.arrow_back),
         ),
         title: Text("Detail Tiket"),
+        actions: [
+          IconButton(onPressed: () {
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => BottomConvexBarr(),));
+          }, icon: Icon(Icons.home))
+        ],
       ),
       body: Screenshot(
         controller: screenshotController,

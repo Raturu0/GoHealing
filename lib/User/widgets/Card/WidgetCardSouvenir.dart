@@ -76,27 +76,39 @@ class WidgetCardSouvenir extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.only(left: 30, right: 30),
-                            backgroundColor: Color(0xFF18227B),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10))),
-                        onPressed: () {
-                          print("klik beli");
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => LoginPage(),
-                              ));
-                        },
-                        child: Text(
-                          "BELI",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: GoogleFonts.poppins().fontFamily,
-                              fontWeight: FontWeight.w800),
-                        ))
+                    Container(
+                      width: MediaQuery.of(context).size.width * (0.47),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.only(left: 30, right: 30),
+                                  backgroundColor: Color(0xFF18227B),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10))),
+                              onPressed: () {
+                                print("klik beli");
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginPage(),
+                                    ));
+                              },
+                              child: Text(
+                                "BELI",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: GoogleFonts.poppins().fontFamily,
+                                    fontWeight: FontWeight.w800),
+                              )),
+                              IconButton(onPressed: () {
+                                print("klik keranjang");
+                              }, 
+                              icon: Icon(Icons.shopping_cart, color: Color(0xFF18227B),),)
+                        ],
+                      ),
+                    )
                   ],
                 ),
               )
