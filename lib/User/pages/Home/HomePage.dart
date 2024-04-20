@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: EdgeInsets.only(left: 20, right: 20, top: 30),
               child: Text(
-                "Temukan Souvenir Kesukaanmu",
+                "Temukan Souvenir Favoritmu",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
